@@ -1,4 +1,3 @@
 package com.example.lostpals.ui
 
-class AccountFragment {
-}
+class AccountFragment

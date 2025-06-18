@@ -50,13 +50,16 @@ class LoginActivity : AppCompatActivity() {
             when (resource) {
                 is Resource.Success -> {
                     val user = resource.data
-                    Toast.makeText(this, "Welcome back, ${user?.username}!", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this, "Welcome back, ${user?.username}!", Toast.LENGTH_SHORT)
+                        .show()
                     // Navigate to main activity
                     startActivity(Intent(this, MainActivity::class.java))
                     finish()
                 }
+
                 is Resource.Error -> {
-                    Toast.makeText(this, "Login failed: ${resource.message}", Toast.LENGTH_LONG).show()
+                    Toast.makeText(this, "Login failed: ${resource.message}", Toast.LENGTH_LONG)
+                        .show()
                 }
             }
         }

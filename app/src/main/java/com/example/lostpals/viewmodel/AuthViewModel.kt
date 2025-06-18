@@ -31,7 +31,12 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
                 val userId = repository.registerUser(username, email, password)
                 registrationStatus.postValue(Resource.Success(userId))
             } catch (e: Exception) {
-                registrationStatus.postValue(Resource.Error(e.message ?: "Registration failed", null))
+                registrationStatus.postValue(
+                    Resource.Error(
+                        e.message ?: "Registration failed",
+                        null
+                    )
+                )
             }
         }
     }
@@ -49,7 +54,7 @@ class AuthViewModel(application: Application) : AndroidViewModel(application) {
         }
     }
 
-    fun logout(){
+    fun logout() {
         sessionManager.logout()
     }
 }

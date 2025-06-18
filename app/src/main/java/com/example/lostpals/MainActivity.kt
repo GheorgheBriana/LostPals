@@ -2,21 +2,15 @@ package com.example.lostpals
 
 import android.content.Intent
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
 import com.example.lostpals.ui.auth.LoginActivity
-import com.example.lostpals.ui.auth.RegisterActivity
 import com.example.lostpals.util.SessionManager
 import com.example.lostpals.viewmodel.AuthViewModel
-import kotlin.jvm.java
 
 class MainActivity : AppCompatActivity() {
     private lateinit var sessionManager: SessionManager
