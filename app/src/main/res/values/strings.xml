@@ -21,5 +21,8 @@
     <string name="btn_login">Sign in</string>
     <string name="link_register">Don\'t have an account? Register</string>
     <string name="logout">Logout</string>
+    <string name="create_post">create_post</string>
+    <string name="inbox">inbox</string>
+    <string name="account">account</string>
 
 </resources>

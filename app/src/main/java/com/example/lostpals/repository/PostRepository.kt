@@ -12,7 +12,6 @@ import com.example.lostpals.data.mapper.toEntity
 class PostRepository(
     private val postDao: PostDao, private val userDao: UserDao
 ) {
-
     suspend fun createPost(postDto: PostDto): Long = postDao.insert(postDto.toEntity())
 
     suspend fun updatePost(postDto: PostDto) {

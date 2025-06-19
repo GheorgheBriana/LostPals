@@ -17,13 +17,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
-
-        <ImageView
-            android:id="@+id/logo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:src="@drawable/logo"
-            android:contentDescription="Logo"/>
+<!--Am taiat logo-ul de langa text, se vedea prea plin-->
+<!--        <ImageView-->
+<!--            android:id="@+id/logo"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:src="@drawable/logo"-->
+<!--            android:contentDescription="Logo"/>-->
 
         <TextView
             android:id="@+id/appName"
@@ -36,14 +36,13 @@
             android:textStyle="bold"/>
     </LinearLayout>
 
-    <!-- Iconițe în dreapta -->
     <LinearLayout
         android:id="@+id/rightSection"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:orientation="horizontal"
         android:gravity="center_vertical"
-        android:paddingEnd="16dp"
+        android:paddingEnd="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
@@ -53,7 +52,15 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/create_post"
-            android:contentDescription="create_post"
+            android:contentDescription="@string/create_post"
+            android:layout_marginEnd="16dp"/>
+
+        <ImageView
+            android:id="@+id/Inbox"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/inbox"
+            android:contentDescription="@string/inbox"
             android:layout_marginEnd="16dp"/>
 
         <ImageView
@@ -61,7 +68,7 @@
             android:layout_width="40dp"
             android:layout_height="40dp"
             android:src="@drawable/account"
-            android:contentDescription="account"/>
+            android:contentDescription="@string/account"/>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
