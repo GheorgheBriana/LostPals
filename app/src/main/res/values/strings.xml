@@ -24,5 +24,6 @@
     <string name="create_post">create_post</string>
     <string name="inbox">inbox</string>
     <string name="account">account</string>
+    <string name="filter">filter</string>
 
 </resources>

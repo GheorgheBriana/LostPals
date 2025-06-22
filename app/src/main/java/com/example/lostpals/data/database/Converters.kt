@@ -1,10 +1,12 @@
 package com.example.lostpals.data.database
 
+import androidx.room.ProvidedTypeConverter
 import androidx.room.TypeConverter
 import com.example.lostpals.data.entity.Location
 import com.example.lostpals.data.entity.ObjectType
 import com.example.lostpals.data.entity.PostType
 
+@ProvidedTypeConverter
 class Converters {
     @TypeConverter
     fun fromPostType(value: PostType): String = value.name

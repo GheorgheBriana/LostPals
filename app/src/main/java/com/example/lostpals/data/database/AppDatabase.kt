@@ -12,7 +12,7 @@ import com.example.lostpals.data.entity.Message
 import com.example.lostpals.data.entity.Post
 import com.example.lostpals.data.entity.User
 
-@Database(entities = [User::class, Post::class, Message::class], version = 2, exportSchema = false)
+@Database(entities = [User::class, Post::class, Message::class], version = 1, exportSchema = false)
 @TypeConverters(Converters::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun userDao(): UserDao
@@ -28,7 +28,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "lostpals_database"
-                ).addTypeConverter(Converters()).build()
+                ).addTypeConverter(Converters())
+                    .fallbackToDestructiveMigration()
+                    .build()
                 INSTANCE = instance
                 instance
             }

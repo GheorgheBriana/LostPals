@@ -5,4 +5,7 @@
     <color name="background">#ECF2F3</color>
     <color name="primary">#C7D9DD</color>
     <color name="form">#80FFFFFF</color>
+    <color name="green">#008000</color>
+    <color name="grey">#708090</color>
+    <color name="stroke">#E0E0E0</color>
 </resources>
