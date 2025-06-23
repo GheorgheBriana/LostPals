@@ -12,6 +12,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lostpals.MainActivity
+import com.example.lostpals.data.dto.PostFilterDto
 import com.example.lostpals.databinding.FragmentHomeBinding
 import com.example.lostpals.ui.adapters.PostAdapter
 import com.example.lostpals.viewmodel.PostViewModel
@@ -84,10 +85,22 @@ class HomeFragment : Fragment() {
                 }
             }
         }
-
+// este atent la modificarile filtrului si actualizeaza fab-ul in consecinta
+        postViewModel.filter.observe(viewLifecycleOwner) { filter ->
+            updateFilterFabState(filter)
+        }
+        postViewModel.filter.value?.let {
+            updateFilterFabState(it)
+        }
         if (postViewModel.posts.value == null) {
             postViewModel.loadPosts(postViewModel.filter.value)
         }
+    }
+
+    private fun updateFilterFabState(filter: PostFilterDto?) {
+        val hasFilters = filter != null &&
+                (filter.location != null || filter.objectType != null)
+        filterFab.isSelected = hasFilters
     }
 
     override fun onResume() {

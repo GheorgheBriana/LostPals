@@ -12,6 +12,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
 import com.example.lostpals.data.database.AppDatabase
 import com.example.lostpals.data.dto.PostFilterDto
 import com.example.lostpals.data.entity.Location
@@ -29,6 +31,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var sessionManager: SessionManager
     private lateinit var postViewModel: PostViewModel
     private lateinit var postRepository: PostRepository
+    private lateinit var navController: NavController
 
     // se executa cand se deschide aplicatia
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -49,6 +52,9 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, 0)
             insets
         }
+        // initiam NavController-ul
+        val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
+        navController = navHostFragment.navController
         // cream conexiunea la baza de date si cream repositories
         val database = AppDatabase.getDatabase(this)
         postRepository = PostRepository(
@@ -58,43 +64,14 @@ class MainActivity : AppCompatActivity() {
         val factory = PostViewModelFactory(postRepository)
         postViewModel = ViewModelProvider(this, factory)[PostViewModel::class.java]
 
-        // incarcam fragmentul principal, adica postarile
-        if (savedInstanceState == null) {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, HomeFragment())
-                .commit()
-        }
-
-        // ❗de pus in MENU PROFILE PAGE
-        // LOGOUT
-//        findViewById<Button>(R.id.btnLogout).setOnClickListener {
-//            ViewModelProvider(this).get(AuthViewModel::class.java).logout()
-//            Toast.makeText(this, "Logged out successfully", Toast.LENGTH_SHORT).show()
-//            redirectToLogin()
-//        }
-
-
         // butonul pentru crearea unei noi postari
         findViewById<ImageView>(R.id.createPostIcon).setOnClickListener {
-            supportFragmentManager.beginTransaction().replace(
-                R.id.fragment_container, CreatePostFragment()
-            ) // inlocuim fragmentul principal cu fragmentul de crearea unei noi postari
-                .addToBackStack(null) // putem folosi butonul back pentru a ajunge in homepage
-                .commit()
+            navController.navigate(R.id.action_homeFragment_to_createPostFragment)
         }
-
-        // ACCESS ACCOUNT FROM MENU
-//        findViewById<ImageView>(R.id.accountIcon).setOnClickListener {
-//            supportFragmentManager.beginTransaction()
-//                .replace(R.id.fragment_container, AccountFragment())
-//                .addToBackStack(null)
-//                .commit()
-//        }
 
         // accesam pagina principala a aplicatiei prin apasarea logo-ului/numelui aplicatiei
         findViewById<TextView>(R.id.appName).setOnClickListener {
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment_container, HomeFragment()).commit()
+            navController.popBackStack(R.id.homeFragment, false)
         }
     }
 

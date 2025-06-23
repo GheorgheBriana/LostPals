@@ -22,7 +22,7 @@
         android:layout_margin="16dp"
         android:src="@drawable/filter"
         android:contentDescription="@string/filter"
-        app:backgroundTint="@color/white"
+        app:backgroundTint="@color/filter_fab_tint"
         app:fabSize="mini"
         app:maxImageSize="22dp"
         app:borderWidth="0dp"

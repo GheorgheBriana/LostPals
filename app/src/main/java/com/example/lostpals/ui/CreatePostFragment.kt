@@ -12,6 +12,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import com.example.lostpals.data.dto.PostDto
 import com.example.lostpals.data.entity.Location
 import com.example.lostpals.data.entity.ObjectType
@@ -53,7 +54,7 @@ class CreatePostFragment : Fragment() {
         // adaugam un ascultator care va fi notificat de fiecare data cand se schimba dimensiunile spatiului ocupat de ferestrele de sistem (adica bare de status, nativatie)
         ViewCompat.setOnApplyWindowInsetsListener(binding.root) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
+            v.setPadding(systemBars.left, 0, systemBars.right, systemBars.bottom)
             insets
         }
         setupSpinners()
@@ -72,7 +73,7 @@ class CreatePostFragment : Fragment() {
                     ).show()
                     resetForm()
                     postViewModel.clearCreatePostResult()
-                    parentFragmentManager.popBackStack()
+                    findNavController().popBackStack()
                 }
                 is Resource.Error -> {
                     Toast.makeText(
