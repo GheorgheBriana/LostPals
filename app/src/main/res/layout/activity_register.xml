@@ -7,16 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background">
-<!--    <ImageView-->
-<!--        android:id="@+id/ivLogo"-->
-<!--        android:layout_width="60dp"-->
-<!--        android:layout_height="60dp"-->
-<!--        android:layout_marginTop="46dp"-->
-<!--        android:layout_marginEnd="16dp"-->
-<!--        android:src="@drawable/logo"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        tools:ignore="Icon" />-->
+
     <androidx.core.widget.NestedScrollView
         android:id="@+id/scrollRoot"
         android:layout_width="0dp"
@@ -35,7 +26,6 @@
             android:gravity="center"
             android:focusableInTouchMode="true">
 
-<!-- Welcome-->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,9 +65,9 @@
                     android:textSize="12sp"
                     android:gravity="end"
                     android:lineSpacingExtra="2dp"
-                    android:layout_gravity="end"/>  <!--sau fara?-->
+                    android:layout_gravity="end"/>
             </LinearLayout>
-<!--Register-->
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -92,7 +82,6 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <!-- Register Title -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -103,7 +92,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="6dp"/>
 
-                    <!-- Username Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -118,12 +106,12 @@
                         android:layout_height="48dp"
                         android:background="@drawable/bg_edittext"
                         android:hint="@string/label_username"
+                        android:textColor="@color/grey"
                         android:inputType="textPersonName"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:layout_marginBottom="14dp"/>
 
-                    <!-- Email Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -138,12 +126,12 @@
                         android:layout_height="48dp"
                         android:background="@drawable/bg_edittext"
                         android:hint="@string/label_email"
+                        android:textColor="@color/grey"
                         android:inputType="textEmailAddress"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:layout_marginBottom="14dp"/>
 
-                    <!-- Password Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -158,12 +146,12 @@
                         android:layout_height="48dp"
                         android:background="@drawable/bg_edittext"
                         android:hint="@string/label_password"
+                        android:textColor="@color/grey"
                         android:inputType="textPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:layout_marginBottom="14dp"/>
 
-                    <!-- Confirm Password Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -178,6 +166,7 @@
                         android:layout_height="48dp"
                         android:background="@drawable/bg_edittext"
                         android:hint="@string/label_confirm_password"
+                        android:textColor="@color/grey"
                         android:inputType="textPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
@@ -203,12 +192,12 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:text="@string/link_login"
+                        android:textColor="@color/grey"
                         android:textSize="16sp"
                         tools:ignore="TouchTargetSizeCheck" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Bottom spacing -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="60dp" />

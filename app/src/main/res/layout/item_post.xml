@@ -25,6 +25,7 @@
                 android:id="@+id/profileImage"
                 android:layout_width="40dp"
                 android:layout_height="40dp"
+                android:contentDescription="@string/profile_picture"
                 android:scaleType="centerCrop"
                 android:background="@drawable/circle_background"
                 app:layout_constraintDimensionRatio="1:1"/>
@@ -33,6 +34,7 @@
                 android:id="@+id/username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:layout_marginStart="12dp"/>
@@ -41,7 +43,7 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_weight="1"/>
-            <!-- Data postării -->
+
             <TextView
                 android:id="@+id/timestamp"
                 android:layout_width="wrap_content"
@@ -49,11 +51,12 @@
                 android:textSize="12sp"
                 android:textColor="@color/grey"/>
         </LinearLayout>
-        <!-- Titlu și descriere -->
+
         <TextView
             android:id="@+id/title"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textSize="16sp"
             android:textStyle="bold"
             android:paddingStart="8dp"
@@ -70,6 +73,7 @@
             android:paddingBottom="8dp"/>
         <TextView
             android:id="@+id/location"
+            android:textColor="@color/black"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="14sp"
@@ -78,6 +82,7 @@
             android:paddingBottom="8dp"/>
         <TextView
             android:id="@+id/description"
+            android:textColor="@color/black"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="14sp"
@@ -88,6 +93,7 @@
             android:id="@+id/postImage"
             android:layout_width="match_parent"
             android:layout_height="300dp"
+            android:contentDescription="@string/image_for_post_with_the_lost_item"
             android:scaleType="centerCrop"
             android:background="@color/white"/>
     </LinearLayout>

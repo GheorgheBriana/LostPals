@@ -83,6 +83,8 @@ class CreatePostFragment : Fragment() {
                     ).show()
                     postViewModel.clearCreatePostResult()
                 }
+
+                null -> { /*nu se intampla nimic, pentru ca avem nevoie de el doar pentru a "reseta" LiveData-ul dupa ce se creeaza o postare (functia clearCreatePostResult)*/ }
             }
         }
     }

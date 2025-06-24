@@ -1,12 +1,11 @@
 <resources>
     <string name="app_name">LostPals</string>
-<!--Welcome-->
+
     <string name="welcome_title">Welcome to</string>
     <string name="welcome_lostpals">LostPals!</string>
     <string name="welcome_back_title">Welcome back to</string>"
     <string name="welcome_sub">Did you lost an item?\nLet our community help you find it!</string>
 
-<!--Register-->
     <string name="register_title">Register</string>
     <string name="label_username">Username</string>
     <string name="label_email">Email</string>
@@ -15,15 +14,31 @@
     <string name="btn_sign_up">Sign Up</string>
     <string name="link_login">Already have an account? Login</string>
 
-<!--Login-->
-    <!-- Login -->
     <string name="login_title">Login</string>
     <string name="btn_login">Sign in</string>
     <string name="link_register">Don\'t have an account? Register</string>
     <string name="logout">Logout</string>
-    <string name="create_post">create_post</string>
+    <string name="create_post">Create post</string>
     <string name="inbox">inbox</string>
     <string name="account">account</string>
     <string name="filter">filter</string>
+    <string name="apply">Apply</string>
+    <string name="clear_filters">Clear Filters</string>
+    <string name="object_category">Object Category</string>
+    <string name="location">Location</string>
+    <string name="create_new_post">Create New Post</string>
+    <string name="title">Title</string>
+    <string name="enter_title">Enter title</string>
+    <string name="description">Description</string>
+    <string name="enter_description">Enter description</string>
+    <string name="object_type">Object Type</string>
+    <string name="reward_optional">Reward (optional)</string>
+    <string name="enter_reward_amount">Enter reward amount</string>
+    <string name="upload_image">Upload Image</string>
+    <string name="preview_of_selected_image">Preview of selected image</string>
+    <string name="list_of_posts">List of posts</string>
+    <string name="no_posts_found">No posts found</string>
+    <string name="image_for_post_with_the_lost_item">Image for post with the lost item</string>
+    <string name="profile_picture">Profile picture</string>
 
 </resources>

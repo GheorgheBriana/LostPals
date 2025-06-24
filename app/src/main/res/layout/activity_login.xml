@@ -27,7 +27,6 @@
             android:gravity="center"
             android:focusableInTouchMode="true">
 
-            <!-- Welcome Section -->
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -60,7 +59,6 @@
 
             </LinearLayout>
 
-            <!-- Login Card -->
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -75,7 +73,6 @@
                     android:orientation="vertical"
                     android:padding="20dp">
 
-                    <!-- Login Title -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -86,7 +83,6 @@
                         android:layout_gravity="center_horizontal"
                         android:layout_marginBottom="20dp"/>
 
-                    <!-- Email/Username Field -->
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -101,6 +97,7 @@
                         android:layout_height="48dp"
                         android:background="@drawable/bg_edittext"
                         android:hint="@string/label_username"
+                        android:textColor="@color/grey"
                         android:inputType="text"
                         android:padding="12dp"
                         android:textSize="14sp"
@@ -119,12 +116,12 @@
                         android:layout_height="48dp"
                         android:background="@drawable/bg_edittext"
                         android:hint="@string/label_password"
+                        android:textColor="@color/grey"
                         android:inputType="textPassword"
                         android:padding="12dp"
                         android:textSize="14sp"
                         android:layout_marginBottom="20dp"/>
 
-                    <!-- Login Button -->
                     <Button
                         android:id="@+id/btnLogin"
                         android:layout_width="match_parent"
@@ -136,7 +133,6 @@
                         android:elevation="4dp"
                         app:cornerRadius="12dp"/>
 
-                    <!-- Register Link -->
                     <TextView
                         android:id="@+id/tvRegisterLink"
                         android:layout_width="wrap_content"
@@ -146,12 +142,12 @@
                         android:clickable="true"
                         android:focusable="true"
                         android:text="@string/link_register"
+                        android:textColor="@color/grey"
                         android:textSize="16sp"
                         tools:ignore="TouchTargetSizeCheck" />
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
-            <!-- Bottom spacing -->
             <View
                 android:layout_width="match_parent"
                 android:layout_height="20dp" />

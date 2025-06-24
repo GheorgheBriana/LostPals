@@ -10,7 +10,7 @@
         android:id="@+id/recyclerViewPosts"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="List of posts"
+        android:contentDescription="@string/list_of_posts"
         android:clipToPadding="false"
         android:paddingBottom="72dp"/>
 
@@ -32,7 +32,8 @@
         android:id="@+id/emptyState"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="No posts found"
+        android:text="@string/no_posts_found"
+        android:textColor="@color/black"
         android:textSize="18sp"
         android:visibility="gone"
         android:layout_gravity="center"/>
