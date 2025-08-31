@@ -13,7 +13,7 @@ The app helps people reconnect by creating posts about lost pets or objects, all
 - [👩‍💻 Authors](#-authors)
 
 ---
-
+<a id="features"></a>
 ## ✨ Features
 - 🔑 **Authentication**: Login & Register with validation  
 - 📝 **Create posts** for lost pets/objects with title, description, location, category, reward, and image  
@@ -34,7 +34,7 @@ The app helps people reconnect by creating posts about lost pets or objects, all
   - Color selectors & gradients  
   - Responsive Material Design  
 ---
-
+<a id="tech-stack"></a>
 ## 🛠️ Tech Stack
 - **Language**: Kotlin  
 - **Architecture**: MVVM (Model–View–ViewModel)  
@@ -45,7 +45,7 @@ The app helps people reconnect by creating posts about lost pets or objects, all
 - **Navigation**: Jetpack Navigation Component  
 
 ---
-
+<a id="screenshots"></a>
 ## 📸 Screenshots
 
 ### 🔑 Authentication
@@ -71,7 +71,7 @@ The app helps people reconnect by creating posts about lost pets or objects, all
 <img width="1080" height="2412" alt="image" src="https://github.com/user-attachments/assets/458ff99b-501b-451b-945b-217d496db03e" />
 
 ---
-
+<a id="getting-started"></a>
 ## 🚀 Getting Started
 
 1. Clone the repository:
@@ -86,3 +86,9 @@ The app helps people reconnect by creating posts about lost pets or objects, all
 3. Run the app
 - Choose an emulator or physical device (minimum SDK 21)
 - Click Run in Android Studio
+- 
+---
+<a id="authors"></a>
+## 👩‍💻 Authors
+- 👩 **Gheorghe Briana-Maria**
+- 👩 **Nita-Gherghisan Anelis**
